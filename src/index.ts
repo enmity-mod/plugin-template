@@ -9,6 +9,7 @@ const Patcher = create('silent-typing');
 const SilentTyping: Plugin = {
    name: 'SilentTyping',
    version: '1.0.0',
+   description: 'Silences your typing indicator.',
    authors: [
       {
          name: 'eternal',
