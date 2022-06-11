@@ -1,21 +1,15 @@
 import { Plugin, registerPlugin } from 'enmity/managers/plugins';
 import { getByProps } from 'enmity/metro';
 import { create } from 'enmity/patcher';
+import manifest from '../manifest.json';
+
+import Settings from './components/Settings';
 
 const Typing = getByProps('startTyping');
-
 const Patcher = create('silent-typing');
 
 const SilentTyping: Plugin = {
-   name: 'SilentTyping',
-   version: '1.0.0',
-   description: 'Silences your typing indicator.',
-   authors: [
-      {
-         name: 'eternal',
-         id: '263689920210534400'
-      }
-   ],
+   ...manifest,
 
    onStart() {
       Patcher.instead(Typing, 'startTyping', () => { });
@@ -24,6 +18,10 @@ const SilentTyping: Plugin = {
 
    onStop() {
       Patcher.unpatchAll();
+   },
+
+   getSettingsPanel({ settings }) {
+      return <Settings settings={settings} />;
    }
 };
 
