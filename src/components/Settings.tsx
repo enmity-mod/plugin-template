@@ -1,5 +1,5 @@
-import { SettingsStore } from 'enmity/api/settings';
 import { FormRow, FormSwitch } from 'enmity/components';
+import { SettingsStore } from 'enmity/api/settings';
 import { React } from 'enmity/metro/common';
 
 interface SettingsProps {
