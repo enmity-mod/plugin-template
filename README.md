@@ -1,11 +1,11 @@
 <div align='center'>
-   <img src='https://repo.enmity.app/banner.png' />
+   <img src='https://raw.githubusercontent.com/enmity-mod/assets/main/Enmity_Banner.png?raw=true' />
 </div>
 
 ---
 
 <div align='center'>
-   <h3>Plugin template</h3>
+   <h3>Plugin Template</h3>
 
    Template for Enmity plugins.<br />
    Use `npm install` to install the required modules and use `npm run build` to build your plugin.
